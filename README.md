@@ -33,3 +33,16 @@ Baseline tips:
 - Treat `station_token` and `horizon_h` as categorical
 - Calibrate probabilities (LogLoss-heavy metric)
 
+### Why this is interesting (and non-trivial)
+- **Spring-tide false alarms**: extreme tidal ranges can mimic anomalies; the slice explicitly stresses this (`slice_high_tidal_range`).
+- **Station-relative tails**: what counts as “low” depends on the station and its local datum.
+- **Multi-horizon calibration**: 12h vs 24h risk differs; calibrating per horizon often helps.
+
+### Target intuition
+The label answers:
+> “Will the station experience an unusually low-water deviation within the next 12/24 hours?”
+
+### Source
+NOAA CO-OPS API:
+- `https://api.tidesandcurrents.noaa.gov/api/prod/`
+
