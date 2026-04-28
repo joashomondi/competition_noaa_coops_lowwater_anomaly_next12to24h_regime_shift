@@ -2,7 +2,7 @@
 
 Kaggle-style competition package built from **NOAA CO-OPS** water level time series.
 
-- **Task**: binary classification — predict `pred_lowwater_anomaly_next`
+- **Task**: binary classification — predict `pred_lowwater_anom_next`
 - **Target**: whether the next 12/24 hours contain an unusually low-water anomaly (panelized by horizon)
 - **Split**: time-based regime shift (see `dataset_card.md`)
 - **Metric**: composite LogLoss + slice LogLoss + (1 - AUPRC) (see `instruction.md`)
